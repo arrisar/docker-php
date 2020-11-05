@@ -1,0 +1,17 @@
+steps:
+
+- name: gcr.io/cloud-builders/docker
+  id: build
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    docker build -t arrisar/php:latest .
+
+- name: gcr.io/cloud-builders/docker
+  id: push
+  entrypoint: bash
+  args:
+  - -c
+  - |
+    docker push arrisar/php:latest
