@@ -14,4 +14,4 @@ steps:
   args:
   - -c
   - |
-    docker push arrisar/php --all-tags
+    docker push -a arrisar/php
