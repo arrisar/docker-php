@@ -6,7 +6,7 @@ steps:
   args:
   - -c
   - |
-    docker build -t arrisar/php:latest .
+    docker build . -t arrisar/php:latest -t arrisar/php:8.0
 
 - name: gcr.io/cloud-builders/docker
   id: push
@@ -14,4 +14,4 @@ steps:
   args:
   - -c
   - |
-    docker push arrisar/php:latest
+    docker push arrisar/php --all-tags

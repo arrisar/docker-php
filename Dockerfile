@@ -6,6 +6,7 @@ LABEL maintainer="james@arrisar.com.au"
 RUN \
   apt-get update && \
   apt-get install -y \
+    cron \
     libpq-dev \
     nginx \
     supervisor \
