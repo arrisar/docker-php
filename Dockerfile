@@ -41,6 +41,6 @@ RUN chmod -R u+x /var/entrypoints
 COPY ./nginx /etc/nginx
 COPY ./supervisord.conf /etc/supervisor/
 
-EXPOSE 3000
+EXPOSE 8000
 ENTRYPOINT ["/var/entrypoints/php"]
 CMD /usr/bin/supervisord -n
