@@ -1,0 +1,29 @@
+#!/bin/bash
+
+set -e
+
+ARCH=linux/amd64
+PHP_VER=8.1
+COMPOSER_VER=2
+CADDY_VER=2
+
+cd base
+
+docker buildx build \
+	--tag arrisar/php:${PHP_VER} \
+	--build-arg PHP_VER=${PHP_VER} \
+	--build-arg COMPOSER_VER=${COMPOSER_VER} \
+	--platform $ARCH \
+	--push .
+
+
+cd ../caddy
+
+docker buildx build \
+	--tag arrisar/php:${PHP_VER}-caddy \
+	--build-arg PHP_VER=${PHP_VER} \
+	--build-arg CADDY_VER=${CADDY_VER} \
+	--platform $ARCH \
+	--push .
+
+cd ..

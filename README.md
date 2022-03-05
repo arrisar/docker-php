@@ -1,9 +1,9 @@
-# arrisar/php
+# docker-php
 
-A simple PHP-versioned container to run both nginx and php-fpm together to provide an all-in-one web container.
+A collection of PHP server images.
 
-## How to use
+Currently includes a baseline PHP container as well as a Caddy web server.
 
-To use this image, simply copy your files into `/var/www`.
+## Caddy
 
-The default web root is `/var/www/public/index.php`, and the port is `8000`.
+Provide any number of custom Caddyfiles via `/etc/caddy/conf/`, exposed over port 80.

@@ -1,0 +1,7 @@
+:80
+root * /var/www/public
+php_fastcgi unix//run/php-fpm.sock
+file_server
+encode gzip
+log
+import conf/*
