@@ -18,6 +18,7 @@ RUN apk add --no-cache --virtual .build-deps \
         freetype \
         zip \
         unzip \
+        libpq-dev \
         libzip-dev \
         libpng \
         libjpeg-turbo \
@@ -36,6 +37,7 @@ RUN apk add --no-cache --virtual .build-deps \
         zip \
         pdo \
         pdo_mysql \
+        pdo_pgsql \
         mysqli \
         opcache \
         pcntl \
