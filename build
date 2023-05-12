@@ -2,8 +2,8 @@
 
 set -e
 
-ARCH=linux/amd64
-PHP_VER=8.1
+ARCH=linux/amd64,linux/arm64
+PHP_VER=8.2
 COMPOSER_VER=2
 CADDY_VER=2
 
@@ -15,7 +15,6 @@ docker buildx build \
 	--build-arg COMPOSER_VER=${COMPOSER_VER} \
 	--platform $ARCH \
 	--push .
-
 
 cd ../caddy
 
